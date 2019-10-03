@@ -15,10 +15,10 @@ public class Book {
 
     public static Book create(ParserItem pi) {
         Book ret = new Book();
-        ret.isbn = pi.getValue("\uFEFFtitle");
+        ret.title = pi.getValue("\uFEFFtitle");
         ret.isbn = pi.getValue("isbn");
-        ret.isbn = pi.getValue("authors");
-        ret.isbn = pi.getValue("description");
+        ret.authors = pi.getValue("authors");
+        ret.description = pi.getValue("description");
 
         return ret;
     }
@@ -32,8 +32,7 @@ public class Book {
                 + this.title + ", "
                 + this.isbn + ", "
                 + this.authors + ", "
-                + this.description + ", "
-                ;
+                + this.description;
     }
 }
 

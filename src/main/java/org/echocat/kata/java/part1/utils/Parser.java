@@ -12,7 +12,6 @@ import java.io.*;
 public class Parser implements ParserInterface {
     private CSVParser csvParser = null;
 
-    // TODO: Logging
     public Book createBook() throws IOException {
         if (!csvParser.iterator().hasNext()) {
             csvParser.close();
@@ -21,7 +20,6 @@ public class Parser implements ParserInterface {
 
         CSVRecord rec = csvParser.iterator().next();
 
-        System.out.println(rec.get("isbn"));
 
         ParserItem pi = new ParserItem();
         pi.data = rec;

@@ -14,7 +14,8 @@ public class Library {
     public void search(String what, String value) {
         if (what.equals("isbn")) {
             for (Book b: books) {
-                if (b.getIsbn().equals(value)) System.out.println(b);
+                if (b.getIsbn().equals(value))
+                    System.out.println(b);
             }
         }
     }
